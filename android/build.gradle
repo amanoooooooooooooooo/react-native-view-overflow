@@ -2,19 +2,20 @@
 buildscript {
     repositories {
         jcenter()
-        google()
+        // google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        // classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
 apply plugin: 'com.android.library'
 
-def DEFAULT_COMPILE_SDK_VERSION             = 26
-def DEFAULT_BUILD_TOOLS_VERSION             = "27.0.3"
-def DEFAULT_TARGET_SDK_VERSION              = 26
+def DEFAULT_COMPILE_SDK_VERSION             = 23
+def DEFAULT_BUILD_TOOLS_VERSION             = "25.0.3"
+def DEFAULT_TARGET_SDK_VERSION              = 22
 
 android {
     compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
@@ -33,9 +34,10 @@ android {
 
 repositories {
     mavenCentral()
-    google()
+    // google()
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
+    // implementation 'com.facebook.react:react-native:+'
+    compile 'com.facebook.react:react-native:+'
 }
